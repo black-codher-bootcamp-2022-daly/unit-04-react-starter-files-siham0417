@@ -2,17 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Book({book}) {
-  const { title, authors } = book.volumeInfo;
+  const { title, authors, } = book.volumeInfo;
   const { retailPrice } = book.saleInfo;
   console.log(book)
   return (
   <div style={{
-    backgroundColor: "grey",
+    backgroundColor: "orange",
     fontSize: "20px",
-    marginBottom: "6px"}}>
+    marginBottom: "6px"
+    }}>
 
     <h3>{title}</h3>
     {retailPrice && retailPrice.amount < 3 ? "Great deal" : "Best seller"}
+    <p style={{
+      fontFamily:"cursive"
+    }}>{authors}</p>
   </div>
   );
 }
