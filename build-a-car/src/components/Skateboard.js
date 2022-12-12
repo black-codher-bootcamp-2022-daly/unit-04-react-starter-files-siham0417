@@ -1,6 +1,19 @@
+import Wheel from './Wheel.js';
+
 export default function Skateboard(props) {
-  return <h2>Hey, I'm a Skateboard
+  const wheels = [];
+
+for  (let i = 0; i < props.numberOfWheels; i++) {
+  wheels.push("wheel-" + i);
+} 
+  return (
+    <div>
+  <h2>Hey, I'm a Skateboard
     I have
     {props.numberOfWheels} wheels
-  </h2>;
+  </h2>
+  {wheels.map((wheel) => <Wheel key={wheel} />)}
+  <button>Click me</button>
+  </div>
+  );
 }

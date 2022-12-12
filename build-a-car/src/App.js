@@ -7,7 +7,9 @@ import Bus from './components/Bus.js';
 import Skateboard from './components/Skateboard.js';
 
 
+
 export default function App() {
+   
   return (
     <div className="App">
       <Car numberOfWheels="4"/>
