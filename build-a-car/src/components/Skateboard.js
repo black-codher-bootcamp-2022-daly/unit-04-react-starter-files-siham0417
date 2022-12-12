@@ -1,4 +1,6 @@
-import React from 'react'
-export default function Skateboard() {
-  return <h2>Hey, I'm a Skateboard</h2>;
+export default function Skateboard(props) {
+  return <h2>Hey, I'm a Skateboard
+    I have
+    {props.numberOfWheels} wheels
+  </h2>;
 }

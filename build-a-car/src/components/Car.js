@@ -1,4 +1,5 @@
-import React from 'react'
-export default function Car() {
-  return <h2>Hi, I am a Car!</h2>;
+export default function Car (props) {
+  return <h2>Hi, I am a Car! I have
+    {props.numberOfWheels} wheels
+  </h2>;
 }

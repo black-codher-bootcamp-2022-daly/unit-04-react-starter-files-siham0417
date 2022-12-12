@@ -1,4 +1,6 @@
-import React from 'react'
-export default function Bicycle() {
-  return <h2>Good Morning, I am a Bicycle!</h2>;
+export default function Bicycle(props) {
+  return <h2>Good Morning, I am a Bicycle 
+    I have
+    {props.numberOfWheels} wheels
+  </h2>;
 }
