@@ -2,35 +2,31 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export function Book(props) {
+  console.log(props)
   return (
     <div
       style={{
-        backgroundColor: "red",
+        backgroundColor: "pink",
         padding: "10px",
         marginBottom: "4px",
       }}
     >
       <h3>{props.title}</h3>
-      <p>{props.book.volumeInfo.description}</p>
+      <img src={props.book.volumeInfo.imageLinks.thumbnail}/>
+      <p>{props.authors}</p>
+      <p>{props.subtitle}</p>
+      <p>{props.selfLink}</p>
       <button onClick={() => props.handleClick(props.id)}>Click me</button>
-      {props.retailPrice && props.retailPrice.amount < 3
-        ? "Great deal"
-        : "Best Seller"}
+      {props.retailPrice && props.retailPrice.amount}
     </div>
   );
 }
 
-export function PimpedBook(props) {
-  return (
-    <div style={{ padding: "12px", border: "1px solid", marginBottom: "4px" }}>
-      {props.children}
-    </div>
-  );
-}
 
 Book.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   retailPrice: PropTypes.shape({
     amount: PropTypes.number,
   }),

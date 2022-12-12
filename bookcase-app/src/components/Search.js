@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types'
 
 export const Search = (props) => {
-  const { keyword, setKeyword, findBooks } = props;
+  const { keyword, setKeyword, handleSubmit } = props;
 
   function handleChange(changeEvent) {
     setKeyword(changeEvent.target.value);
@@ -10,7 +10,7 @@ export const Search = (props) => {
 
   function onSubmit(event) {
     event.preventDefault()
-      findBooks(keyword)
+      handleSubmit(keyword)
   }
 
   return (
@@ -27,7 +27,7 @@ export const Search = (props) => {
 Search.propTypes = {
     keyword: PropTypes.string,
     setKeyword: PropTypes.func,
-    findBooks: PropTypes. func,
+    handleChange: PropTypes. func,
 }
 
 
